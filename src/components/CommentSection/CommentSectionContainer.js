@@ -3,16 +3,19 @@ import React, { useState } from "react";
 import CommentInput from "./CommentInput";
 import Comment from "./Comment";
 import "./Comment.css";
+import PostsPage from "../PostsContainer/PostsPage";
 
 const CommentSection = props => {
-  // console.log(props);
+  
 
   return (
     <div>
-      
-      
+     {props.comments.map(p => (
+       <Comment comment={p}/>
+     ))}
       <CommentInput/>
     </div>
+    
   );
 };
 
